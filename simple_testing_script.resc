@@ -1,0 +1,17 @@
+i2c1.sensor_si7021 Temperature 10
+i2c1.sensor_si7021 Humidity 10
+sleep 5
+i2c1.sensor_si7021 Temperature 15
+i2c1.sensor_si7021 Humidity 15
+sleep 5
+i2c1.sensor_si7021 Temperature 20
+i2c1.sensor_si7021 Humidity 20
+sleep 5
+i2c1.sensor_si7021 Temperature 25
+i2c1.sensor_si7021 Humidity 25
+sleep 5
+i2c1.sensor_si7021 Temperature 30
+i2c1.sensor_si7021 Humidity 30
+sleep 5
+i2c1.sensor_si7021 Temperature 35
+i2c1.sensor_si7021 Humidity 35

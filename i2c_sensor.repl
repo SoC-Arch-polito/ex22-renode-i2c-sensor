@@ -1,0 +1,18 @@
+/* Add the I2C controller to the sysbus.
+   The address and the position of the Interrupts can be obtained from the
+   data sheet of the STM32F4. We are only adding one I2C, but the platform
+   supports 3.
+*/
+i2c1: I2C.STM32F4_I2C @ sysbus 0x40005400
+    EventInterrupt -> nvic@31
+    ErrorInterrupt -> nvic@32
+
+/* Add the sensor to the i2c1 controller we just created.
+   The address is the 7bit address you find on the data sheet.
+   Remember this address needs to coincide with the one on the data sheet.
+   It may be tempting to add several sensors of the same model on different
+   addresses, but this is not correct. Remember this sensor has only one fixed
+   address that you can not configure.
+*/
+sensor_si7021: Sensors.SI70xx @ i2c1 0x40
+    model: Model.SI7021

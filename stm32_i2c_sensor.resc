@@ -1,0 +1,9 @@
+:name: STM32_disco with I2C sensor
+:description: STM32 discovery kit with i2c controller and temp / humidity sensor.
+
+using sysbus
+
+mach create "STM32F4_Discovery_i2cSensor"
+
+machine LoadPlatformDescription @platforms/boards/stm32f4_discovery-kit.repl
+machine LoadPlatformDescription @i2c_sensor.repl
